@@ -43,6 +43,7 @@ export default class BasePage {
 	 * @requires page have both `url` and `pageLoaded` properties
 	 */
 	async goto() {
+		console.log(`Navigate to ${this.url}`);
 		await browser.get(this.url, this.timeout.xl);
 		return await this.loaded();
 	}

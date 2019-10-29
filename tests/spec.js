@@ -1,8 +1,12 @@
-﻿var HomePage = require('../pages/HomePage');
+﻿import homePage from '../pages/homePage';
+import tabsPage from '../pages/tabsPage';
 
-describe('homepage', function() {
-	it('should have working catalog link',
+describe('simple-fingerstyle.com home page', function() {
+	it('should have working tabs link',
 		function () {
-			HomePage.goto();
+			homePage.goto();
+			homePage.clickOnTabsLink();
+
+			expect(tabsPage.table.isVisible);
 		});
 });
